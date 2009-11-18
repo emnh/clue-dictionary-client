@@ -1,0 +1,46 @@
+2007-03-06 Eivind Magnus Hvidevold <emh@kvarteret.no> (version 0.9.7)
+	* clue.cc: fix nasty bug causing trouble on 64-bit machines. I had used
+	           sizeof instead of strlen on filename extension.
+	* cluefile.cc: fix regex search by passing REG_NOSUB to regcomp instead
+	               of regexec.
+	* libclue.c: sort order; truncate on '(' for word comparison
+
+2006-08-20 Eivind Magnus Hvidevold <emh@kvarteret.no> (version 0.9.6)
+	* configure.ac: fix some complaints from automake/autoconf.
+	* autogen.sh: update download paths. download only if necessary. add error
+	              checks for missing macros.
+	
+2006-08-20 Nils O Selåsdal <noselasd@aasgard.homelinux.org>
+	* clue.h: remove class prefix to fix compilation
+	* clue.cc: fix segfault in find_files
+
+2006-05-26 Eivind Magnus Hvidevold <emh@kvarteret.no>
+	* clue.h, cluerecord.cc, common.c, 
+	  clue.cc, clue.1.in: add option --no-color
+
+2006-05-19 Eivind Magnus Hvidevold <emh@kvarteret.no>
+	* cluefile.cc: fix memory bug in find_files that sometimes caused a
+	               segfault (use static on dirent ptr passed to scandir)
+
+2006-05-13 Eivind Magnus Hvidevold <emh@kvarteret.no> (version 0.9.5)
+	* bindings/Makefile.am: fix _clue.so symlink
+	* mapping.c: add Swedish<->English
+	* configure.ac: bump version number
+	* configure.ac: make missing swig fatal error for --enable-python
+	* cluefile.cc: add option -D for directory to scan for clue .DAT files
+	* cluefile.cc: make ${datadir}/clue default search directory
+	* cluefile.cc: add option -i for interactive interface
+	* cluefile.cc: add option -R for regex search
+	* cluefile.cc: remove -i for access to --install option and
+	               reuse -i for interactive mode
+	* cluefile.cc: remove popt aliasing support;
+	               remove options --clearfiles and --default
+	* bugfix: fix various memory leaks
+    * clue.1.in: update manual
+
+2006-05-11 Aleksander Blomskøld <aleksabl@gmail.com>
+	* cluefile.cc: fix ordering of binSearch results
+	* cluefile.cc: fix bug where last word was omitted from results
+	
+2005-01-14 Eivind Magnus Hvidevold <emh@kvarteret.no> (version 0.9.2)
+    * clue.1.in: add manual page

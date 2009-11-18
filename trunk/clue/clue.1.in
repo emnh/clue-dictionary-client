@@ -1,0 +1,114 @@
+.TH clue 1 "13 May 2006" "Version @PACKAGE_VERSION@"
+
+.SH NAME
+clue - a word lookup program for natural language dictionary files
+
+.SH SYNOPSIS
+.B clue
+[options]
+<lookup word>
+
+.SH DESCRIPTION
+Clue for linux is an application for doing lookups in the dictionary files from
+Clue Norge ASA. 
+
+.SH OPTIONS
+
+.PP
+Mandatory arguments to long options are mandatory for short options too.
+
+.TP
+\fB\-c\fR, \fB\-\-count-words\fR
+Count the number of lookup words in dictionary.
+
+.TP
+\fB\-f\fR, \fB\-\-filename\fR=\fIFILENAME\fR
+A dictionary file to process. Both -D and -f may be given.
+
+.TP
+\fB\-D\fR, \fB\-\-dict-dir\fR=\fIFILENAME\fR
+A directory to scan for clue dictionary files to process. Scans for
+non-directory files with DAT extension. If neither -D nor -f is given,
+@datadir@ is used for -D. Both -D and -f may be given.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR
+Start in interactive mode.
+
+.TP
+\fB\-d\fR, \fB\-\-dump\fR
+Dump dictionary to stdout. Useful for searching with grep.
+
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Be more verbose.
+
+.TP
+\fB\-r\fR, \fB\-\-regex\fR
+Regular expression search.
+
+.TP
+\fB\-s\fR, \fB\-\-sort-test\fR
+Test the accuracy of the comparison operator. If this is less than 1 it means
+you won't be able to lookup all the words using binary search.
+
+.TP
+\fB\-\-no-color\fR
+Disable ANSI-coloring of output.
+
+.TP
+\fB\-\-install\fR
+Decrypt dictionary for installation, like the clue installer does. The files
+are xor encrypted with their own filename and each 64 KiB block is reversed.
+
+.TP
+\fB\-?\fR, \fB\-\-help\fR
+Show help message.
+
+.TP
+\fB\-\-usage\fR
+Show brief usage message.
+
+
+.SH SUPPORTS
+
+.IP \(bu 4
+Clue 7.0 Dictionary Files \(co Clue Norge ASA
+
+.SH FEATURES
+
+.IP \(bu 4
+Fast search (binary search)
+.IP \(bu 4
+Regular expression search (binary search)
+.IP \(bu 4
+Uses the Clue Dictionary files unmodified
+.IP \(bu 4
+Interactive interface using readline and (TODO:ncurses)
+
+.SH DEVELOPER FEATURES
+.IP \(bu 4
+Object Oriented API
+.IP \(bu
+Python bindings
+
+.SH AUTHOR
+Written by Eivind Magnus Hvidevold.
+
+.SH REPORTING BUGS
+Report bugs to <@PACKAGE_BUGREPORT@>.
+
+.SH COPYRIGHT
+The clue linux client program is \(co Copyright 2005 by Eivind Magnus Hvidevold and
+licensed under the GNU GPL v2.
+
+.PP
+The dictionary data is covered by the commercial license which you got when you
+bought the dictionaries from Clue Norge ASA. It's illegal to use this program
+with the Clue dictionaries if you do not have such a license. You are not
+allowed to distribute the dictionaries with this program, unless you are the
+copyright owner of the dictionaries (that is: Clue Norge ASA).
+
+.SH BUGS
+Sort order is not entirely correct for all language files, so there are a few
+words you may not be able to find using binary search.

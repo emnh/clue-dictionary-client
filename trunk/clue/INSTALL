@@ -1,0 +1,14 @@
+
+For Clue 6.0:
+First put your Clue installation zip files in the data/ directory (or just put
+the encrypted .DAT files in data/cluedata). 
+
+For Clue 7.0:
+You need to install the .msi-file and put the installed .DAT-files in
+/usr/share/clue.
+
+Then run the commands:
+./configure
+make
+make install
+
