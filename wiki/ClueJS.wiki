@@ -3,6 +3,10 @@
 = Introduction =
 The idea is to be able to run on a web server without using server side technologies. It works by issuing partial HTTP request for chunks of the dictionary files and doing binary search.
 
+= Compatibility =
+Works in Firefox.
+In Google Chrome selecting dictionary by keyboard doesn't work.
+
 = Screenshot =
 
 http://clue-dictionary-client.googlecode.com/files/clue-screen.png
