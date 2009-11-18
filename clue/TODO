@@ -1,0 +1,5 @@
+TODO
+*cleanup memory allocation schemes
+*option for enabling/disabling color
+*automatically generate of comparison operator
+*ncurses interface

@@ -1,0 +1,37 @@
+
+See the manual, run:
+man ./clue.1
+
+NAME
+
+clue for linux - a word lookup program for natural language dictionary files
+
+DESCRIPTION
+
+Clue for linux is an application for doing lookups in the dictionary files from
+Clue Norge ASA.  The linux client itself is GPL, but the data are covered by
+the commercial license which you got when you bought the dictionaries from Clue
+Norge ASA. It's illegal to use this program with the Clue dictionaries if you
+do not have a license. You are not allowed to distribute the dictionaries with
+this program.
+
+SUPPORTS
+
+* Clue 7.0 Data Files (© Clue Norge ASA)
+
+FEATURES
+
+* Fast search (binary search)
+* Regular expression search
+* Uses the Clue Dictionary files unmodified
+* Interactive interface using readline and (TODO: ncurses)
+
+DEVELOPER FEATURES
+
+* OO-style API
+* Python bindings
+
+BUGS
+
+*sort order is not entirely correct for all language files, so
+there are a few words you may not be able to find using binary search
