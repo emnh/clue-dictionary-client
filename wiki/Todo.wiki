@@ -1,10 +1,8 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
-
-Cool futuristic stuff of science fiction. Add feature requests.
+#summary Cool futuristic stuff of science fiction. Add feature requests.
 
 = Todo =
 
  * Mobile versions
    * iPhone
+ * More GUI?
+ * Better UI for clue2, more command line options, ncurses maybe
